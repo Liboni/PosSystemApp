@@ -337,11 +337,11 @@ public class ReadFragment extends Fragment implements OnClickListener {
                 SharedPreferences preferences = mContext.getSharedPreferences(CONNECTSERVER, Context.MODE_PRIVATE);
                 String server = preferences.getString("SERVER", null);
 
-//                if (server == null) {
-//                    Toast.makeText(mContext, "Set server connection", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-                URL url = new URL("http://192.168.200.26:8681" +"/getProducts/" + epc);
+                if (server == null) {
+                    Toast.makeText(mContext, "Set server connection", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                URL url = new URL(server +"/getProducts/" + epc);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setConnectTimeout(5000);

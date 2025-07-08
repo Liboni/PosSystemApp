@@ -221,11 +221,11 @@ public class ReadTagFragment extends Fragment implements OnClickListener {
             try {
                 SharedPreferences preferences = mContext.getSharedPreferences(CONNECTSERVER, Context.MODE_PRIVATE);
                 String server = preferences.getString("SERVER", null);
-//
-//                if (server == null) {
-//                    Toast.makeText(mContext, "Set server connection", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
+
+                if (server == null) {
+                    Toast.makeText(mContext, "Set server connection", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 StringBuilder builder = new StringBuilder();
                 for (int i = 0; i < tags.size(); i++) {
                     builder.append(tags.get(i).strEPC);
@@ -234,7 +234,7 @@ public class ReadTagFragment extends Fragment implements OnClickListener {
                     }
                 }
                 String epcList = builder.toString();
-                URL url = new URL("http://192.168.200.26:8681" + "/saveEPC/" + epcList);
+                URL url = new URL(server + "/saveEPC/" + epcList);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setConnectTimeout(5000);
