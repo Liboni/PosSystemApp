@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--总宽度：800-->
+
+    <!-- android:layout_width="155dp" -->
+    <TextView
+        android:id="@+id/idTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <!-- android:layout_width="330dp" -->
+    <TextView
+        android:id="@+id/codeTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:singleLine="false"
+        android:textSize="18sp" />
+
+    <!-- android:layout_width="155dp" -->
+
+<!--    // commented section not it use now-->
+    <TextView
+        android:id="@+id/productTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.8"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <!-- android:layout_width="160dp" -->
+
+<!--    // commented section not it use now-->
+    <TextView
+        android:id="@+id/countTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="18sp" />
+</LinearLayout>

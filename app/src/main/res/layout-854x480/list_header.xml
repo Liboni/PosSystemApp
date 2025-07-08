@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tag_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--android:layout_width="60dp"-->
+    <TextView
+        android:id="@+id/id_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/layer"
+        android:gravity="center_vertical|center_horizontal"
+        android:singleLine="true"
+        android:text="@string/idno"
+        android:textColor="#ff444444"
+        android:textSize="18sp" />
+
+    <!--android:layout_width="222dp"-->
+    <TextView
+        android:id="@+id/code_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="0.9"
+        android:background="@drawable/layer"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/code"
+        android:textColor="#ff333333"
+        android:textSize="18sp" />
+
+    <!--android:layout_width="60dp"-->
+
+    <TextView
+        android:id="@+id/product_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1.8"
+        android:background="@drawable/layer"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/product"
+        android:textColor="#ff333333"
+        android:textSize="18sp" />
+
+    <!--android:layout_width="65dp"-->
+
+    <TextView
+        android:id="@+id/count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/layer"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/count"
+        android:textColor="#ff333333"
+        android:textSize="18sp" />
+</LinearLayout>
