@@ -231,9 +231,16 @@ public class ReadFragment extends Fragment implements OnClickListener {
                 if (timer == null) {
                     if (isStopThread) return;
                     isStopThread = true;
+
+                    // Clear all data structures
                     Reader.rrlib.getInventoryTagMapList().clear();
                     Reader.rrlib.getInventoryTagResultList().clear();
                     dtIndexMap = new LinkedHashMap<>();
+
+                    // ADD THESE LINES TO RESET THE DATA:
+                    products.clear();
+                    productMap.clear();
+
                     MsgCallback callback = new MsgCallback();
                     Reader.rrlib.SetCallBack(callback);
                     ErrorCount = 0;
@@ -247,6 +254,7 @@ public class ReadFragment extends Fragment implements OnClickListener {
                             txNum.setText("0");
                             txTime.setText("0");
                             txtCount.setText("");
+                            txtSpeed.setText("0");  // Also reset speed display
 
                             time = 0;
                             myAdapter.notifyDataSetChanged();
@@ -274,7 +282,6 @@ public class ReadFragment extends Fragment implements OnClickListener {
             cancelScan();
         }
     }
-
     public void cancelScan() {
         Reader.rrlib.StopRead();
         isReader = false;
